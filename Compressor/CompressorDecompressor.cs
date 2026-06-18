@@ -2,13 +2,13 @@
 
 namespace Compressor
 {
-    internal class Program
+    public static class CompressorDecompressor
     {
         static void Main(string[] args)
         {
         }
 
-        static string Compress(string input)
+        public static string Compress(string input)
         {
             var result = new StringBuilder("");
             var splittedInput = new List<string>();
@@ -26,7 +26,7 @@ namespace Compressor
             }
 
             // проходим по входной строке. Пока символы повторяются - увеличиваем счетчик
-            // если встречаем новый символ - записываем предыдущий и счетчик в промежуточный результат
+            // если встречаем новый символ - записываем предыдущий символ и его счетчик в промежуточный результат
             currentCharacter = input[0];
             characterCount = 1;
             for (int i = 1; i < input.Length; i++)
